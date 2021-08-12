@@ -1,0 +1,26 @@
+version: '2'
+services:
+    wildfly:
+        build: wildfly/.
+        ports:
+            - "8080:8080"
+            - "9990:9990"
+        links:
+            - mysqldb:mysql
+        environment:
+            - MYSQL_PORT_3306_TCP_ADDR=1237.0.0.1
+            - MYSQL_PORT_3306_TCP_PORT=3306
+            - MYSQL_ENV_MYSQL_USER=root
+            - MYSQL_ENV_MYSQL_PASSWORD=root
+            - MYSQL_DATABASE_NAME=mycrud
+    postgresdb:
+        build: mysql/.
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=root
+        volumes:
+            - pg_data:/var/lib/mysql/data
+volumes:
+    pg_data:
+
+
