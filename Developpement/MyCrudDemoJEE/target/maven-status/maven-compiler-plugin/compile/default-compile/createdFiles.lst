@@ -1,0 +1,6 @@
+eql\al\demo\metier\IdataBaseService.class
+eql\al\demo\dao\IdataBase.class
+eql\al\demo\entites\SchoolEntityManager.class
+eql\al\demo\dao\DatabaseOperations.class
+eql\al\demo\web\SchoolBean.class
+eql\al\demo\metier\SchoolServiceImpl.class
